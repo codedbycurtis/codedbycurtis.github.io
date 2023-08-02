@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcurtis_caulfield=self.webpackChunkcurtis_caulfield||[]).push([[515],{2537:function(e,u,t){t.r(u),t.d(u,{Head:function(){return l}});var c=t(7294);u.default=()=>{};const l=()=>c.createElement("title",null,"Freeplay Music — Coming soon")}}]);
+//# sourceMappingURL=component---src-pages-projects-freeplay-music-jsx-76016e470c086064b8d8.js.map
