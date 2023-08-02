@@ -7,7 +7,6 @@ module.exports = {
     siteUrl: `https://www.curtiscaulfield.dev`,
     description: `Curtis Caulfield's personal website.`
   },
-  pathPrefix: `/`,
   plugins: [
     'gatsby-plugin-styled-components',
     {
