@@ -118,7 +118,8 @@ const IndexPage = () => {
                         alt='A portrait of Curtis Caulfield.'
                         placeholder='none'
                         style={{
-                            mask: 'linear-gradient(black, 95%, transparent)'
+                            mask: 'linear-gradient(black, 95%, transparent)',
+                            WebkitMask: 'linear-gradient(black, 95%, transparent)'
                         }} />
                 </div>
                 <HeroMain>
