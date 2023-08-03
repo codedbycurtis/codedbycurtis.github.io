@@ -4,11 +4,21 @@
 module.exports = {
   siteMetadata: {
     title: `Curtis Caulfield`,
+    description: `Curtis Caulfield's personal website.`,
+    image: `/images/portrait.png`,
     siteUrl: `https://www.curtiscaulfield.dev`,
-    description: `Curtis Caulfield's personal website.`
   },
   plugins: [
-    'gatsby-plugin-styled-components',
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`
+      }
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

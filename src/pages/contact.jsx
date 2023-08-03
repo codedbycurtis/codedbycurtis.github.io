@@ -1,12 +1,12 @@
 import React, { useRef } from 'react'
 import { css, styled } from 'styled-components'
 import { FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa'
+import Seo from '../components/Seo'
 import PageContainer from '../components/PageContainer'
 import Subheading from '../components/Subheading'
 
 const ContactContainer = styled.div`
-    width: 100%;
-    max-width: 600px;
+    max-width: 1200px;
     display: grid;
     place-items: center;
     border: 1px solid rgb(40, 40, 40);
@@ -41,6 +41,7 @@ const EmailForm = styled.form`
 
 const TextInputBase = css`
     width: 100%;
+    max-width: calc(1200px - 2rem);
     margin: 0 0 1rem 0;
     padding: 0.5rem;
     border: 1px solid rgb(45, 45, 45);
@@ -130,4 +131,4 @@ const ContactPage = () => {
 
 export default ContactPage
 
-export const Head = () => <title>Curtis Caulfield | Contact</title>
+export const Head = () => <Seo title='Curtis Caulfield | Contact' />

@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import { styled } from 'styled-components'
 import { SiFlutter, SiDart, SiJavascript, SiHtml5, SiCss3,
     SiReact, SiGatsby, SiCsharp, SiDotnet, SiXamarin } from 'react-icons/si'
+import Seo from '../../components/Seo'
 import PageContainer from '../../components/PageContainer'
 
 const ProjectGrid = styled.div`
@@ -205,4 +206,4 @@ const ProjectsPage = () => {
 
 export default ProjectsPage
 
-export const Head = () => <title>Curtis Caulfield | Projects</title>
+export const Head = () => <Seo title='Curtis Caulfield | Projects' />

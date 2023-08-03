@@ -1,8 +1,9 @@
 import React from 'react'
+import { StaticImage } from 'gatsby-plugin-image'
 import { styled } from 'styled-components'
 import { FaDownload, FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa'
+import Seo from '../components/Seo'
 import PageContainer from '../components/PageContainer'
-import Portrait from '../images/portrait.png'
 import Cv from '../files/CV.pdf'
 
 const StyledPageContainer = styled(PageContainer)`
@@ -20,11 +21,6 @@ const HeroContainer = styled.div`
         grid-template-columns: 40% 60%;
         max-width: 1200px;
     }
-`
-
-const HeroImage = styled.img`
-    width: 100%;
-    mask: linear-gradient(black, 95%, transparent);
 `
 
 const HeroMain = styled.div`
@@ -58,7 +54,7 @@ const LinkContainer = styled.div`
     align-items: center;
     justify-content: space-between;
 
-    @media screen and (min-width: 396px) {
+    @media screen and (min-width: 600px) {
         flex-direction: row;
         align-items: start;
     }
@@ -117,7 +113,13 @@ const IndexPage = () => {
         <StyledPageContainer>
             <HeroContainer>
                 <div>
-                    <HeroImage src={Portrait} />
+                    <StaticImage
+                        src='../images/portrait.png'
+                        alt='A portrait of Curtis Caulfield.'
+                        placeholder='none'
+                        style={{
+                            mask: 'linear-gradient(black, 95%, transparent)'
+                        }} />
                 </div>
                 <HeroMain>
                     <HeroText>
@@ -166,4 +168,4 @@ const IndexPage = () => {
 
 export default IndexPage
 
-export const Head = () => <title>Curtis Caulfield</title>
+export const Head = () => <Seo />

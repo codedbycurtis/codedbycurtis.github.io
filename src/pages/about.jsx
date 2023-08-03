@@ -1,5 +1,6 @@
 import React from 'react'
 import { styled } from 'styled-components'
+import Seo from '../components/Seo'
 import PageContainer from '../components/PageContainer'
 import Heading from '../components/Heading'
 import Subheading from '../components/Subheading'
@@ -134,13 +135,12 @@ export default AboutPage
 
 export const Head = () => {
     return (
-        <>
-            <title>Curtis Caulfield | About</title>
+        <Seo title='Curtis Caulfield | About'>
             <link
                 rel='stylesheet'
                 type='text/css'
                 media='screen,print'
                 href='https://www.testdome.com/content/source/stylesheets/embed.css' />
-        </>
+        </Seo>
     )
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import { styled } from 'styled-components'
+import Seo from '../components/Seo'
 import NotFound from '../images/void.svg'
 import PageContainer from '../components/PageContainer'
 import StyledLink from '../components/StyledLink'
@@ -32,7 +33,9 @@ const NotFoundPage = () => {
   return (
     <PageContainer>
       <HeroContainer>
-        <img src={NotFound} alt='' />
+        <img
+          src={NotFound}
+          alt='Illustration of a man staring into a black hole.' />
         <h1>404 &mdash; Page not found</h1>
         <p style={{ color: 'lightgray' }}>"And if you gaze long enough into an abyss, the abyss will gaze back into you."</p>
         <p>How about you <InlineStyledLink to='/'>return home</InlineStyledLink> instead?</p>
@@ -43,4 +46,4 @@ const NotFoundPage = () => {
 
 export default NotFoundPage
 
-export const Head = () => <title>Page not found</title>
+export const Head = () => <Seo title='Page not found' />

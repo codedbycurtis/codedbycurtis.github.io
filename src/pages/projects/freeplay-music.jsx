@@ -1,5 +1,6 @@
 import React from 'react'
 import { styled } from 'styled-components'
+import Seo from '../../components/Seo'
 import PageContainer from '../../components/PageContainer'
 import Heading from '../../components/Heading'
 
@@ -50,4 +51,4 @@ const FreeplayMusicPage = () => {
 
 export default FreeplayMusicPage
 
-export const Head = () => <title>Freeplay Music | Coming soon</title>
+export const Head = () => <Seo title='Freeplay Music | Coming soon' />
