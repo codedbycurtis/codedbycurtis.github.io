@@ -1,0 +1,50 @@
+---
+interface Props {
+    links: Link[];
+}
+
+const { links } = Astro.props;
+---
+
+<div class="link-container">
+    {links.map((value: Link, index: number, array: Link[]) => {
+        return <>
+            <a href={value.url} target="_blank">{value.label}</a>
+            {index != array.length - 1 && <span style="user-select: none;">&diamond;</span>}
+        </>;
+    })}
+</div>
+
+<style>
+    a {
+		color: var(--secondary-fg-color);
+		text-decoration: none;
+		transition: 200ms;
+	}
+
+	a::after {
+		content: '';
+		display: block;
+		width: 0;
+		height: 1px;
+		background-color: rgb(var(--accent-color));
+		transition: 200ms;
+	}
+
+	a:hover {
+		color: var(--primary-fg-color);
+	}
+
+	a:hover::after {
+		width: 100%;
+	}
+
+    .link-container {
+		position: relative;
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		padding: 0.5rem 0;
+		border-top: 1px solid var(--border-color);
+	}
+</style>

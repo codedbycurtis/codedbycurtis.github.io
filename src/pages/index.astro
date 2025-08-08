@@ -1,0 +1,53 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import LinkContainer from '../components/LinkContainer.astro';
+import construction from '../assets/images/construction.svg';
+
+const links: Link[] = [
+	{
+		label: 'GitHub',
+		url: 'https://github.com/codedbycurtis',
+	},
+	{
+		label: 'LinkedIn',
+		url: 'https://linkedin.com/in/curtiscaulfield',
+	},
+	{
+		label: 'Instagram',
+		url: 'https://instagram.com/curtiscaulfield',
+	},
+];
+---
+
+<Layout>
+	<Image
+		src={construction}
+		alt="An illustrative drawing of construction workers."
+		width={360}
+		height={360}
+	/>
+	<h1>Under Construction</h1>
+	<div class="container">
+		<p>My portfolio is currently undergoing a re-design.</p>
+		<p>In the meantime, you can find me on:</p>
+		<LinkContainer links={links} />
+	</div>
+</Layout>
+
+<style>
+	h1 {
+		width: 100%;
+		background-image: repeating-linear-gradient(135deg, rgba(var(--accent-color), 0.5), rgba(var(--accent-color), 0.5) 10px, transparent 10px, transparent 20px);
+		text-align: center;
+	}
+
+	p {
+		margin: 0.5rem;
+		text-align: center;
+	}
+
+	.container {
+		border: 1px solid var(--border-color);
+	}
+</style>
